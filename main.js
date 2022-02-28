@@ -122,5 +122,15 @@ console.log(users)
 //     two : 1,
 //     three : 2
 // }
-
-
+function getCountElement(arr){
+  let res ={}
+  for(i=0;i<arr.length;i++){
+     if(res[arr[i]]){
+        res[arr[i]]=res[arr[i]]+1
+         continue
+     }
+     res[arr[i]]=1
+  }
+  return res
+}
+console.log(getCountElement(["one", "two", "three", "one", "one", "three"]))
